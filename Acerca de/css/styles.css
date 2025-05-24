@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,800;1,800&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transition: 1.5s;
+}
+
+header:hover {
+    background: rgba(0, 0, 0, 0.8);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transition: 1.5s;
+}
+
+.titulo {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 1rem;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+    padding-right: 25px;
+}
+
+nav ul li a {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 800;
+    color: gold;
+    text-decoration: underline;
+    transition: 1s;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#bienvenidos {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 50px;
+    padding-bottom: 1px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+#bienvenidos-text {
+    background: rgba(0, 0, 0, 0.5);
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 800;
+    color:white;
+    font-style: normal;
+    font-size: 25px;
+    padding-bottom: 28px;
+    padding-top: 28px;
+    padding-left:  30px;
+    padding-right:  30px;
+    margin-top: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align:start;
+    border-radius: 65px;
+    transition: 1s;
+}
+
+#bienvenidos-text:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transition: 1s;
+}
+  .menu-toggle-checkbox {
+        display: none;
+    }
+.boton {
+    background: rgba(0, 0, 0, 0.7);
+    margin: 3rem;
+    padding: 1.6rem 2.3rem;
+    border-radius: 50px;
+    align-items: center;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    transition: 1.5s;
+}
+
+.boton:hover {
+    background: rgba(0, 0, 0, 0.8);
+    margin: 3rem;
+    padding: 1.6rem 2.3rem;
+    border-radius: 50px;
+    align-items: center;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 800;
+    color: gold;
+    text-decoration: none;
+    font-size: 30px;
+    transition: 1.5s;
+    text-decoration: underline;
+}
+
+.imagen {
+    border-radius: 70px;
+    margin-bottom: 40px;
+    transition: 1.5s;
+}
+
+.imagen:hover {
+    transition: 1s;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 800;
+    font-style: oblique;
+    transition: 1.5s;
+}
+
+footer:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.body-background {
+    background: url('../images/bg-img.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    #bienvenidos-text {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    img, .imagen {
+        max-width: 100%;
+        height: auto;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        margin: 0;
+    }
+
+    .menu-toggle-checkbox:checked ~ nav ul {
+        display: flex;
+        max-height: 300px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    #bienvenidos {
+        font-size: 40px;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+
+    .menu-toggle-checkbox {
+        display: none;
+    }
+
+    img, .imagen {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+.menu-toggle-checkbox:checked + .menu-toggle .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle-checkbox:checked + .menu-toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle-checkbox:checked + .menu-toggle .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    img, .imagen {
+        max-width: 90%;
+        height: auto;
+    }
+    header {
+        flex-direction: row;
+        padding: 10px 20px;
+    }
+
+    .titulo {
+        font-size: 26px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        box-sizing: border-box;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-toggle-checkbox:checked ~ nav ul {
+        display: flex;
+        max-height: 300px;
+    }
+
+    .menu-toggle-checkbox:checked + .menu-toggle .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle-checkbox:checked + .menu-toggle .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle-checkbox:checked + .menu-toggle .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        display: block;
+        padding: 10px 0;
+    }
+}

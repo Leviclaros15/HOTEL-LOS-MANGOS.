@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+body {
+    background: url('../img/bg_img.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+header:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.titulo {
+    font-weight: 800;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.titulo h1 {
+    margin: 0;
+    font-size: inherit;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav ul li a:hover {
+    color: gold;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.menu-toggle-checkbox {
+    display: none;
+}
+
+.menu-toggle-checkbox:checked ~ nav ul {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.9);
+}
+
+.menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 700px;
+    text-align: left;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.menu h2 {
+    color: #ffcc00;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0.5rem 0;
+    padding: 0.7rem 1rem;
+    background-color: rgba(255, 204, 0, 0.8);
+    color: #000;
+    border-radius: 10px;
+    display: inline-block;
+    min-width: 250px;
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    background-color: rgba(255, 165, 0, 0.9);
+    transform: scale(1.05);
+}
+
+.menu li::before {
+    content: '\2022';
+    color: #4caf50;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.background-image {
+    display: none; 
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    text-align: center;
+    font-weight: 800;
+    font-style: oblique;
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 24px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .menu {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .menu li {
+        min-width: 200px;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .titulo {
+        font-size: 26px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu li {
+        min-width: 250px;
+        font-size: 1.1rem;
+    }
+}
+
+
+
